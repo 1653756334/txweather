@@ -260,7 +260,7 @@ let searchHistory = (value) => {
     } else {
         for (let i = 0; i < len; ++i) {
             if (i === len - 1) {
-                localStorage.setItem(i, search_value);
+                localStorage.setItem(i, value);
                 return;
             }
             let next_value = localStorage.getItem(i + 1);

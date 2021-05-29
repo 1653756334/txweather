@@ -18,7 +18,7 @@
   background-color: #f2f2f2;
   line-height: (30rem/@baseFont);
   font-size: (14rem/@baseFont);
-  margin-bottom: (10rem/@baseFont);
+  margin: (5rem/@baseFont) (7rem/@baseFont);
 }
 
 body {
@@ -440,24 +440,29 @@ body {
     }
 
     .his_box {
-      display: flex;
-      flex-flow: wrap;
-      justify-content: space-between;
 
       .city {
-        .search_list()
+        .search_list();
+        //float: left;
+        display: inline-block;
+        margin-bottom: 0;
+        margin-top: 0;
+        vertical-align: middle;
       }
     }
   }
 
   .hot_city {
+    width: 100%;
     p {
+      margin-top: (10rem/@baseFont);
       color: #434343;
       font-size: (16rem/@baseFont);
       margin-bottom: (12rem/@baseFont);
     }
 
     .hot_city_box {
+      width: 100%;
       display: flex;
       flex-flow: wrap;
       justify-content: space-between;

@@ -51,8 +51,6 @@ rec_container.addEventListener('touchmove', function (e) {
 
 let EleWidth = getComputedStyle(rec_container).width;
 EleWidth = parseInt(EleWidth.slice(0,EleWidth.length-2))/2;
-console.log(EleWidth)
-console.log( document.body.clientWidth)
 rec_container.addEventListener('touchend', function (e) {
     // 获取差值
     let dx = e.changedTouches[0].clientX - stX;

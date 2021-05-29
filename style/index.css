@@ -422,7 +422,7 @@ body {
   background-color: #f2f2f2;
   line-height: 0.8rem;
   font-size: 0.37333333rem;
-  margin-bottom: 0.26666667rem;
+  margin: 0.13333333rem 0.18666667rem;
 }
 .search_page .history {
   position: relative;
@@ -437,11 +437,6 @@ body {
   position: absolute;
   right: 0;
 }
-.search_page .history .his_box {
-  display: flex;
-  flex-flow: wrap;
-  justify-content: space-between;
-}
 .search_page .history .his_box .city {
   width: 28%;
   height: 0.8rem;
@@ -450,14 +445,23 @@ body {
   background-color: #f2f2f2;
   line-height: 0.8rem;
   font-size: 0.37333333rem;
-  margin-bottom: 0.26666667rem;
+  margin: 0.13333333rem 0.18666667rem;
+  display: inline-block;
+  margin-bottom: 0;
+  margin-top: 0;
+  vertical-align: middle;
+}
+.search_page .hot_city {
+  width: 100%;
 }
 .search_page .hot_city p {
+  margin-top: 0.26666667rem;
   color: #434343;
   font-size: 0.42666667rem;
   margin-bottom: 0.32rem;
 }
 .search_page .hot_city .hot_city_box {
+  width: 100%;
   display: flex;
   flex-flow: wrap;
   justify-content: space-between;
@@ -470,7 +474,7 @@ body {
   background-color: #f2f2f2;
   line-height: 0.8rem;
   font-size: 0.37333333rem;
-  margin-bottom: 0.26666667rem;
+  margin: 0.13333333rem 0.18666667rem;
 }
 @keyframes pullDown {
   0% {
