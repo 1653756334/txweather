@@ -48,16 +48,20 @@ rec_container.addEventListener('touchmove', function (e) {
     rec_container.style.transform = 'translateX(' + (dx+preX)/2 + 'px)';
     // console.log(dx+preX)
 })
-let screenWidth = screen.width;
+
+let EleWidth = getComputedStyle(rec_container).width;
+EleWidth = parseInt(EleWidth.slice(0,EleWidth.length-2))/2;
+console.log(EleWidth)
+console.log( document.body.clientWidth)
 rec_container.addEventListener('touchend', function (e) {
     // 获取差值
     let dx = e.changedTouches[0].clientX - stX;
     // 记录移动的距离
     if (dx < -(60)) {
-        rec_container.style.transform = "translateX("+(-screenWidth)+"px)";
+        rec_container.style.transform = "translateX("+(-EleWidth)+"px)";
         p_item[1].style.borderColor = "#cecece";
         p_item[0].style.borderColor = "#e3e3e3";
-        preX = -screenWidth*2;
+        preX = -EleWidth*2;
     } else if (dx > (60)) {
         rec_container.style.transform = "translateX(0)"
         p_item[0].style.borderColor = "#cecece";
@@ -67,7 +71,7 @@ rec_container.addEventListener('touchend', function (e) {
         if (p_item[0].style.borderColor === "#cecece") {
             rec_container.style.transform = "translateX(0)"
         } else {
-            rec_container.style.transform = "translateX("+(-screenWidth)+"px)";
+            rec_container.style.transform = "translateX("+(-EleWidth)+"px)";
         }
     }
 })
