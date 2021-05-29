@@ -85,7 +85,7 @@ let createPage = (position = "") => {
             let day_tem = [];
             let night_tem = [];
             for (let i = 0; i < 2; i++) {
-                date_tem[i].innerHTML = data[i].tem_day + "/" + data[i].tem_night;
+                date_tem[i].innerHTML = data[i].tem_day + "/" + data[i].tem_night + "°";
                 w_desc[i].innerHTML = data[i].wea;
                 w_img[i].src = `images/day/${data[i].wea_img}.png`;
             }
