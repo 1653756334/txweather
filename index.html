@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的腾讯天气</title>
+    <link rel="stylesheet" href="style/index.css">
+    <script src="js/echarts.min.js"></script>
+</head>
+
+<body>
+    <!--搜索-->
+    <div class="search_page">
+        <div class="s_top">
+            <label for="search">
+                <input type="search" class="search" id="search" autocomplete="off" placeholder="搜索地区">
+            </label>
+            <div class="cancel">取消</div>
+        </div>
+        <div class="now_pos">
+            <p>当前定位</p>
+            <div class="match opt">重庆市</div>
+        </div>
+        <div class="history">
+            <div class="clear">清除</div>
+            <p>历史记录</p>
+            <ul class="his_box">
+                <!--<li class="city opt">北京</li>-->
+            </ul>
+        </div>
+        <div class="hot_city">
+            <p>热门城市</p>
+            <ul class="hot_city_box">
+                <li class="city opt">北京</li>
+                <li class="city opt">上海</li>
+                <li class="city opt">广州</li>
+                <li class="city opt">深圳</li>
+                <li class="city opt">郑州</li>
+                <li class="city opt">西安</li>
+                <li class="city opt">南京</li>
+                <li class="city opt">杭州</li>
+                <li class="city opt">武汉</li>
+                <li class="city opt">成都</li>
+                <li class="city opt">重庆</li>
+                <li class="city opt">天津</li>
+            </ul>
+        </div>
+    </div>
+    <!--顶部-->
+    <div class="weather_box">
+
+        <div class="top">
+            <a href="https://xw.qq.com/" class="back"></a>
+            <div class="position"><span></span> <span class="city">重庆市 南岸区</span></div>
+            <a href="#" class="share"></a>
+        </div>
+        <!--    温度显示页面-->
+        <div class="main_page">
+            <div class="air_quality">
+                <p class="quality_num">63</p>
+                <p class="quality_std">良</p>
+            </div>
+            <div class="weather_content">
+                <div class="temperature"><span>18</span>°</div>
+                <div class="weather_desc">晴</div>
+                <div class="more_detail">西风3级</div>
+            </div>
+            <p class="description">现在温度较凉爽~</p>
+            <div class="bg_box">
+                <div class="bg1"></div>
+                <div class="bg2"></div>
+            </div>
+
+        </div>
+    </div>
+    <!--今天和明天的天气-->
+    <div class="today_tomorrow">
+        <div class="today">
+            <p class="top">
+                <span>今天</span>
+                <span class="date_tem">23/12°</span>
+            </p>
+            <p class="bottom">
+                <span class="w_desc">多云</span>
+                <img src="images/太阳.png" alt="" class="w_img">
+            </p>
+        </div>
+        <div class="tomorrow">
+            <p class="top">
+                <span>明天</span>
+                <span class="date_tem">23/12°</span>
+            </p>
+            <p class="bottom">
+                <span class="w_desc">多云</span>
+                <img src="images/太阳.png" class="w_img" alt="">
+            </p>
+        </div>
+    </div>
+    <!--给个小时的天气-->
+    <div class="hours_weather">
+        <ol class="weather_container">
+            <!--<li class="h_item">
+            <span class="h_time">6:00</span>
+            <img src="images/day/yun.png" alt="" class="h_img">
+            <span class="h_tem">17°</span>
+        </li>
+        <li class="h_item"></li>
+        <li class="h_item"></li>
+        <li class="h_item"></li>
+        <li class="h_item"></li>
+        <li class="h_item"></li>
+        <li class="h_item"></li>
+        <li class="h_item"></li>
+        <li class="h_item"></li>
+        <li class="h_item"></li>
+        <li class="h_item"></li>
+        <li class="h_item"></li>
+        <li class="h_item"></li>
+        <li class="h_item"></li>
+        <li class="h_item"></li>
+        <li class="h_item"></li>
+        <li class="h_item"></li>
+        <li class="h_item"></li>
+        <li class="h_item"></li>
+        <li class="h_item"></li>
+        <li class="h_item"></li>
+        <li class="h_item"></li>
+        <li class="h_item"></li>
+        <li class="h_item"></li>-->
+        </ol>
+    </div>
+    <!--一周天气预报-->
+    <div class="week_weather">
+        <div class="line_chart"></div>
+        <ul class="day_weather">
+            <!--<li class="d_item">
+            <p class="day">今天</p>
+            <p class="date">05/29</p>
+            <div class="daytime">
+                <p class="d_weather">多云</p>
+                <img src="images/day/yun.png" alt="">
+            </div>
+            <div class="nighttime">
+                <p class="d_weather">多云</p>
+                <img src="images/day/yun.png" alt="">
+            </div>
+            <div class="wind">
+                <p class="w_dic">北风</p>
+                <p class="w_num">4级</p>
+            </div>
+
+        </li>
+        <li class="d_item"></li>
+        <li class="d_item"></li>
+        <li class="d_item"></li>
+        <li class="d_item"></li>
+        <li class="d_item"></li>
+        <li class="d_item"></li>-->
+        </ul>
+    </div>
+    <!--建议-->
+    <div class="recommend">
+        <div class="rec_container">
+            <ul class="rec_box">
+                <!-- <li class="r_item">
+                <div class="r_icon"></div>
+                <p class="r_des">不限行</p>
+                <p class="r_det">尾号限行</p>
+            </li>
+            <li class="r_item"></li>
+            <li class="r_item"></li>
+            <li class="r_item"></li>
+            <li class="r_item"></li>
+            <li class="r_item"></li>
+            <li class="r_item"></li>
+            <li class="r_item"></li>-->
+            </ul>
+            <ul class="rec_box">
+                <!--<li class="r_item"></li>
+            <li class="r_item"></li>
+            <li class="r_item"></li>
+            <li class="r_item"></li>
+            <li class="r_item"></li>
+            <li class="r_item"></li>
+            <li class="r_item"></li>
+            <li class="r_item"></li>-->
+            </ul>
+        </div>
+    </div>
+    <div class="page">
+        <span class="p_item"></span>
+        <span class="p_item"></span>
+    </div>
+    <!--    数据来源-->
+    <a href="http://m.weather.com.cn" class="from">数据来源于中国天气网</a>
+
+</body>
+<script src="js/support.js"></script>
+<script src="js/index.js"></script>
+
+</html>
