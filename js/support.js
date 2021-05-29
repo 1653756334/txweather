@@ -130,8 +130,8 @@ let createPage = (position = "") => {
                     max: max_tem + 5
                 },
                 grid: {
-                    left: '0%',
-                    right: '0%',
+                    left: '2%',
+                    right: '2%',
                     bottom: "0%",
                     containLabel: false
                 },
