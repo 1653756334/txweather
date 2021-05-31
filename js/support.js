@@ -32,6 +32,7 @@ let createPage = (position = "") => {
         let match = document.querySelector(".match");
         match.innerHTML = position
     }
+    let myChart;
     let my_ajax = new My_ajax(`https://geoapi.qweather.com/v2/city/lookup?location=${position}&key=7c4856271d864a2c9ccfcfce9c5aafa4`);
     my_ajax.get().then(value => {
         let loc = value.location[0].id;
@@ -113,7 +114,7 @@ let createPage = (position = "") => {
 
             let max_tem = Math.max(...day_tem, ...night_tem);
             let min_tem = Math.min(...day_tem, ...night_tem);
-            let myChart = echarts.init(document.querySelector(".line_chart"));
+            myChart = echarts.init(document.querySelector(".line_chart"));
             let option = {
                 xAxis: {
                     boundaryGap: false,
