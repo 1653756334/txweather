@@ -38,13 +38,12 @@ let rec_container = document.querySelector(".rec_container");
 let p_item = document.querySelectorAll(".p_item");
 let stX = 0, preX = 0;
 rec_container.addEventListener('touchstart', function (e) {
-    // 打印的事件对象
     stX = e.changedTouches[0].clientX;
 })
 rec_container.addEventListener('touchmove', function (e) {
     // 获取差值
     let dx = e.changedTouches[0].clientX - stX;
-    // 设置 ul 在 Y 轴上的偏移
+    // 设置 ul 在 X 轴上的偏移
     rec_container.style.transform = 'translateX(' + (dx+preX)/2 + 'px)';
     // console.log(dx+preX)
 })
