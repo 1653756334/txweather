@@ -62,12 +62,12 @@ let createPage = (position = "") => {
             if (value.air <= 50) {
                 quality_std.innerHTML = "优";
                 quality_std.parentElement.style.backgroundColor = "#a8d75e";
-            } else if (value <= 100) {
+            } else if (value.air <= 100) {
                 quality_std.innerHTML = "良";
-            } else if (value <= 150) {
+            } else if (value.air <= 150) {
                 quality_std.innerHTML = "轻度污染";
                 quality_std.parentElement.style.backgroundColor = "#f67d00";
-            } else if (value <= 200) {
+            } else if (value.air <= 200) {
                 quality_std.innerHTML = "中度污染";
                 quality_std.parentElement.style.backgroundColor = "#f40000";
             }
