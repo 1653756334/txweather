@@ -65,7 +65,7 @@ rec_container.addEventListener('touchend', function (e) {
         p_item[1].style.borderColor = "#e3e3e3";
         preX = 0;
     } else {
-        if (p_item[0].style.borderColor === "#cecece") {
+        if (p_item[0].style.borderColor === "rgb(206, 206, 206)") {
             rec_container.style.transform = "translateX(0)"
         } else {
             rec_container.style.transform = "translateX("+(-EleWidth)+"px)";
