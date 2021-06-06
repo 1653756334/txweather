@@ -44,7 +44,7 @@ let createPage = (position = "") => {
         let quality_num = document.querySelector(".quality_num");
         let quality_std = document.querySelector(".quality_std");
         let weather_box = document.querySelector(".weather_box");
-        my_ajax = new My_ajax(`https://tianqiapi.com/free/day?appid=84713452&appsecret=kHhe6hyD&cityid=${loc}`)
+        my_ajax = new My_ajax(`https://tianqiapi.com/free/day?appid=42613675&appsecret=HUBOpdL8&cityid=${loc}`)
         // 改变实时天气
         my_ajax.get().then(value => {
             city.innerHTML = value.city;
@@ -79,7 +79,7 @@ let createPage = (position = "") => {
         let w_desc = document.querySelectorAll(".w_desc");
         let w_img = document.querySelectorAll(".w_img");
         let day_weather = document.querySelector(".day_weather");
-        my_ajax = new My_ajax(`https://www.tianqiapi.com/free/week?appid=84713452&appsecret=kHhe6hyD&cityid=${loc}`)
+        my_ajax = new My_ajax(`https://www.tianqiapi.com/free/week?appid=42613675&appsecret=HUBOpdL8&cityid=${loc}`)
         my_ajax.get().then(value => {
             while (day_weather.hasChildNodes()) day_weather.removeChild(day_weather.firstChild);
             let data = value.data
@@ -173,7 +173,7 @@ let createPage = (position = "") => {
         // 逐小时
         /**/
         let weather_container = document.querySelector(".weather_container");
-        my_ajax = new My_ajax(`https://v0.yiketianqi.com/api/worldchina?appid=84713452&appsecret=kHhe6hyD&cityid=${loc}`);
+        my_ajax = new My_ajax(`https://v0.yiketianqi.com/api/worldchina?appid=42613675&appsecret=HUBOpdL8&cityid=${loc}`);
         my_ajax.get().then(value => {
             while (weather_container.hasChildNodes()) weather_container.removeChild(weather_container.firstChild);
             let data = value.hours;
